@@ -8,24 +8,30 @@ import {
     Wrapped,
     WrappedJustified,
     WrappedHeaderText,
-    WrappedNav
+    WrappedA,
+    RightSidea,
+    LeftSidea,
+    RightSide,
+    Navbar,
+    LeftSideHome
 } from './style';
 
-import { Input } from 'antd';
+// import { Input } from 'antd';
 
 import {
     HeartOutlined,
-    UserOutlined
+    UserOutlined,
 } from '@ant-design/icons';
 
-const { Search } = Input;
+// const { Search } = Input;
+import ButtonInputSearch from '../ButtonInputSearch/ButtonInputSearch';
 
 const HeaderComponent = () => {
     const menuItems = [
         {
             key: '1',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="/signup">
+                <a target="" rel="noopener noreferrer" href="/signup">
                     Đăng Nhập
                 </a>
             ),
@@ -33,7 +39,7 @@ const HeaderComponent = () => {
         {
             key: '2',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="/signin">
+                <a target="" rel="noopener noreferrer" href="/signin">
                     Đăng Ký
                 </a>
             ),
@@ -53,17 +59,25 @@ const HeaderComponent = () => {
             <Wrapped>
                 <WrappedHeaderText span={24}>
                     <span>Blissful Pets xin chào, gọi ngay: </span>
-                    <a href="tel:0123456789" title="0123456789">012 345 6789</a>
+                    <WrappedA href="tel:0349826133" title="0349826133">034 982 6133</WrappedA>
                     <span className="span-or"> hoặc </span>
-                    <a href="mailto:info@BlissfulPets.vn" title="info@lildanpet.vn">info@BlissfulPets.vn</a>
+                    <WrappedA href="mailto:info@BlissfulPets.vn" title="info@lildanpet.vn">info@BlissfulPets.vn</WrappedA>
                 </WrappedHeaderText>
                 <WrappedHeader justify="center">
-                    <WrappedLogo span={6}>Blissful Pets</WrappedLogo>
+
+                    <span span={6}>
+                        <WrappedLogo href="/">Blissful Pets</WrappedLogo>
+
+                    </span>
                     <Col span={12}>
-                        <Search placeholder="Tìm dịch vụ..."
-                            enterButton />
+                        <ButtonInputSearch
+                            size="large"
+                            placeholder="Tìm dịch vụ..."
+                            textbutton=" "
+
+                        />
                     </Col>
-                    <WrappedJustified span={6} offset={6}>
+                    <WrappedJustified span={6} >
                         <WrappedFlex>
                             <WrappedIcon>
                                 <HeartOutlined />
@@ -76,9 +90,22 @@ const HeaderComponent = () => {
                         </WrappedFlex>
                     </WrappedJustified>
                 </WrappedHeader>
-                <WrappedNav>
-                    
-                </WrappedNav>
+                
+                    <Navbar>
+                        <div className="left-side">
+                            {/* Nội dung bên trái */}
+                            <LeftSideHome href="/">Nhà BLISSFUL</LeftSideHome>
+                            <LeftSidea href="/introduct">Giới thiệu</LeftSidea>
+                            <LeftSidea href="/services">Dịch vụ</LeftSidea>
+                            <LeftSidea href="/news">Tin tức</LeftSidea>
+                            <LeftSidea href="/contact">Liên hệ</LeftSidea>
+                        </div>
+                        <RightSide >
+                            {/* Nội dung bên phải */}
+                            <RightSidea href="/order">Đặt hẹn</RightSidea>
+                        </RightSide>
+                    </Navbar>
+                
             </Wrapped>
         </div>
     );

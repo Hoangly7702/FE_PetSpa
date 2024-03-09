@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { routes } from './routes'
 
 import DefaultComponent from './components/DefaultComponent/DefaultComponent'
+
 export function App() {
 
   return (
@@ -25,6 +26,7 @@ export function App() {
 
         </Routes>
       </Router>
+      {/* {<FooterComponent></FooterComponent>} */}
     </div>
   )
 }
