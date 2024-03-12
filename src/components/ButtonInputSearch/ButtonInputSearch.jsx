@@ -13,7 +13,7 @@ const CustomInput = styled(Input)`
     border-radius: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    
+    border:"none";
 
 `;
 
@@ -25,7 +25,7 @@ const CustomButton = styled(Button)`
     border-bottom-right-radius: 20px;
     background-color: #000000;
     color: #ffffff;
-    
+    border:"none";
     
 `;
 

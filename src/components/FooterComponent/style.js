@@ -13,6 +13,7 @@ export const WrappedFooter = styled.div`
 
     margin:auto;
     margin-top: 35px;
+    
 `
 
 

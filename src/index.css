@@ -6,12 +6,12 @@
 body {
   
   /* max-width: 1400px; */
-  margin: 0;
-  text-align: center;
+  margin: auto;
+  text-align: justify;
   font-family: 'AntTeam', sans-serif;
   /* padding: 10px; */
-  font-size: 62.5%;
-  
+  font-size: 62.5%px;
+  background-color: rgb(255, 255, 255);
 }
 
 
@@ -22,7 +22,16 @@ code {
 }
 
 #container{
-  margin:0 15%;
-  margin-top: auto;
-  margin-bottom: auto;
+
+  font-family: 'AntTeam', sans-serif;
+  font-size: 16px;
+  margin:auto;
+  justify-content: center;
+  /* // align-items: center; */
+  text-align:left;
+  max-width:1260px;
+  /* max-width:1400px; */
+  /* margin-left:15%;
+  margin-right:15%; */
+   
 }

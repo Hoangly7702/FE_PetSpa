@@ -1,3 +1,4 @@
+// import { Button } from 'antd';
 import styled from 'styled-components';
 
 export const WrappedContentStyle = styled.h3`
@@ -24,3 +25,14 @@ export const WrappedContainer = styled.div`
     padding:10px;
     
 `
+
+// export const WrappedButton = styled(Button)`
+//     font-weight:"bold",
+//     color:"#fff",
+//     background-color:"#be9660",
+//     padding:"30px",
+//     &:hover{
+//         backgroundColor:"#a77d44",
+//     }
+// `
+    

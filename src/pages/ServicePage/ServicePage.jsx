@@ -1,12 +1,15 @@
 import React from 'react';
 
+
 const ServicePage = () => {
     return (
-        <div>
-            <h1>ServicePage</h1>
+        <div id='container'>
+            
+
+
         </div>
     )
-        
+
 }
 
 export default ServicePage;

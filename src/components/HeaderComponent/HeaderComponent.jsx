@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Dropdown, Menu } from 'antd';
+import { Badge, Col, Dropdown, Menu } from 'antd';
 import {
     WrappedHeader,
     WrappedLogo,
@@ -26,12 +26,13 @@ import {
 // const { Search } = Input;
 import ButtonInputSearch from '../ButtonInputSearch/ButtonInputSearch';
 
+
 const HeaderComponent = () => {
     const menuItems = [
         {
             key: '1',
             label: (
-                <a target="" rel="noopener noreferrer" href="/signup">
+                <a target="" rel="noopener noreferrer" href="/sign-up">
                     Đăng Nhập
                 </a>
             ),
@@ -39,7 +40,7 @@ const HeaderComponent = () => {
         {
             key: '2',
             label: (
-                <a target="" rel="noopener noreferrer" href="/signin">
+                <a target="" rel="noopener noreferrer" href="/sign-in">
                     Đăng Ký
                 </a>
             ),
@@ -47,7 +48,7 @@ const HeaderComponent = () => {
     ];
 
     const menu = (
-        <Menu>
+        <Menu style={{textAlign:"left",marginLeft:"-150px"}} >
             {menuItems.map(item => (
                 <Menu.Item key={item.key}>{item.label}</Menu.Item>
             ))}
@@ -72,7 +73,7 @@ const HeaderComponent = () => {
                     <Col span={12}>
                         <ButtonInputSearch
                             size="large"
-                            placeholder="Tìm dịch vụ..."
+                            placeholder="Tìm kiếm..."
                             textbutton=" "
 
                         />
@@ -80,32 +81,35 @@ const HeaderComponent = () => {
                     <WrappedJustified span={6} >
                         <WrappedFlex>
                             <WrappedIcon>
-                                <HeartOutlined />
+                                <Badge count={5} color='#a77d44'>
+                                    <HeartOutlined style={{fontSize:"1.8rem"}}/>
+                                </Badge>
+
                             </WrappedIcon>
                             <WrappedIcon>
-                                <Dropdown overlay={menu} placement="bottomRight" arrow>
+                                <Dropdown overlay={menu} placement="bottomRight" arrow >
                                     <UserOutlined />
                                 </Dropdown>
                             </WrappedIcon>
                         </WrappedFlex>
                     </WrappedJustified>
                 </WrappedHeader>
-                
-                    <Navbar>
-                        <div className="left-side">
-                            {/* Nội dung bên trái */}
-                            <LeftSideHome href="/">Nhà BLISSFUL</LeftSideHome>
-                            <LeftSidea href="/introduct">Giới thiệu</LeftSidea>
-                            <LeftSidea href="/services">Dịch vụ</LeftSidea>
-                            <LeftSidea href="/news">Tin tức</LeftSidea>
-                            <LeftSidea href="/contact">Liên hệ</LeftSidea>
-                        </div>
-                        <RightSide >
-                            {/* Nội dung bên phải */}
-                            <RightSidea href="/order">Đặt hẹn</RightSidea>
-                        </RightSide>
-                    </Navbar>
-                
+
+                <Navbar>
+                    <div className="left-side">
+                        {/* Nội dung bên trái */}
+                        <LeftSideHome href="/">Nhà BLISSFUL</LeftSideHome>
+                        <LeftSidea href="/introduct">Giới thiệu</LeftSidea>
+                        <LeftSidea href="/services">Dịch vụ</LeftSidea>
+                        <LeftSidea href="/news">Tin tức</LeftSidea>
+                        <LeftSidea href="/contact">Liên hệ</LeftSidea>
+                    </div>
+                    <RightSide >
+                        {/* Nội dung bên phải */}
+                        <RightSidea href="/order">Đặt hẹn</RightSidea>
+                    </RightSide>
+                </Navbar>
+
             </Wrapped>
         </div>
     );
