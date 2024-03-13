@@ -32,7 +32,7 @@ const HeaderComponent = () => {
         {
             key: '1',
             label: (
-                <a target="" rel="noopener noreferrer" href="/sign-up">
+                <a target="" rel="noopener noreferrer" href="/sign-in">
                     Đăng Nhập
                 </a>
             ),
@@ -40,7 +40,7 @@ const HeaderComponent = () => {
         {
             key: '2',
             label: (
-                <a target="" rel="noopener noreferrer" href="/sign-in">
+                <a target="" rel="noopener noreferrer" href="/sign-up">
                     Đăng Ký
                 </a>
             ),

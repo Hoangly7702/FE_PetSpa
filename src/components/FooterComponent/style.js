@@ -1,7 +1,18 @@
 import { Row } from "antd";
 import styled from "styled-components";
 
-
+export const WrappedLogo = styled.a`
+    font-size:2.2rem;
+    font-family:Parkavenue, cursive;
+    font-weight:bold;
+    color:#a77d44;
+    text-align:left;
+    margin-right:40px;
+    text-decoration: none;
+    &:hover {
+        color: #a77d44;
+    }
+`
 
 export const WrappedFooter = styled.div`
     
